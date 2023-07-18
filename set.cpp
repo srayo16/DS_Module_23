@@ -12,13 +12,18 @@ int main()
     {
         int x;
         cin >> x;
-        s.insert(x);
+        s.insert(x); // O(logN)
     }
 
     for (auto i = s.begin(); i != s.end(); i++)
     {
         cout << *i << endl;
     }
+    cout << s.count(50) << endl; // O(logN)
+    if (s.count(50))
+        cout << "YES" << endl;
+    else
+        cout << "NO" << endl;
 
     return 0;
 }
